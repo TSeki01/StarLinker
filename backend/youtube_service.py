@@ -47,35 +47,40 @@ def get_channel_stats(channel_ids: list[str]) -> dict[str, dict]:
 def get_recent_videos(channel_id: str, days: int = DAYS_BACK) -> list[Video]:
     """
     Fetch videos published within the last `days` days for a given channel.
-    Uses search.list to find videos, then videos.list for full stats.
+    Uses playlistItems.list (1 unit) instead of search.list (100 units).
     """
     youtube = get_youtube_service()
-    published_after = (
-        datetime.now(timezone.utc) - timedelta(days=days)
-    ).isoformat()
+    published_after = datetime.now(timezone.utc) - timedelta(days=days)
+
+    # Standard YouTube behavior: Replace 'UC' with 'UU' to get Uploads playlist ID
+    uploads_playlist_id = channel_id.replace("UC", "UU", 1)
 
     videos = []
     try:
-        # Step 1: Search for recent videos from the channel
-        search_response = youtube.search().list(
-            part="id",
-            channelId=channel_id,
-            type="video",
-            publishedAfter=published_after,
-            order="date",
+        # Step 1: Get recent videos from the channel's upload playlist
+        playlist_response = youtube.playlistItems().list(
+            part="snippet",
+            playlistId=uploads_playlist_id,
             maxResults=50,
         ).execute()
 
-        video_ids = [
-            item["id"]["videoId"]
-            for item in search_response.get("items", [])
-            if item["id"].get("videoId")
-        ]
+        video_ids = []
+        for item in playlist_response.get("items", []):
+            published_at_str = item["snippet"].get("publishedAt")
+            if not published_at_str:
+                continue
+            
+            # yt api returns "2024-01-01T00:00:00Z", replace Z for python fromisoformat
+            published_date = datetime.fromisoformat(published_at_str.replace("Z", "+00:00"))
+            
+            if published_date >= published_after:
+                v_id = item["snippet"]["resourceId"]["videoId"]
+                video_ids.append(v_id)
 
         if not video_ids:
             return videos
 
-        # Step 2: Get detailed video stats
+        # Step 2: Get detailed video stats (videos.list is 1 unit per call)
         for i in range(0, len(video_ids), 50):
             batch_ids = video_ids[i : i + 50]
             video_response = youtube.videos().list(
