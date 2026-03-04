@@ -1,0 +1,43 @@
+{
+    "app_title": "StarLinker",
+    "app_subtitle": "YouTube 業配分析儀表板",
+    "filter": {
+        "nationality": "國籍篩選",
+        "type": "創作者類型",
+        "sort": "排序方式",
+        "japan": "🇯🇵 日本",
+        "taiwan": "🇹🇼 台灣",
+        "korea": "🇰🇷 韓國",
+        "youtuber": "YouTuber",
+        "vtuber": "VTuber",
+        "sort_subscribers": "訂閱數",
+        "sort_views": "觀看數",
+        "sort_engagement": "互動率"
+    },
+    "table": {
+        "rank": "#",
+        "channel": "頻道",
+        "video_title": "影片標題",
+        "views": "觀看數",
+        "subscribers": "訂閱數",
+        "engagement": "互動率",
+        "nationality": "國籍",
+        "type": "類型",
+        "published": "發布日期"
+    },
+    "badge": {
+        "pr": "業配",
+        "sponsored": "贊助"
+    },
+    "status": {
+        "loading": "資料載入中...",
+        "error": "載入失敗，請稍後再試",
+        "empty": "目前沒有找到業配影片",
+        "no_results": "沒有符合條件的結果"
+    },
+    "language": {
+        "zh-TW": "繁體中文",
+        "ja": "日本語",
+        "ko": "한국어"
+    }
+}

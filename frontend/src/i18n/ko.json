@@ -1,0 +1,43 @@
+{
+    "app_title": "StarLinker",
+    "app_subtitle": "YouTube 협찬 분석 대시보드",
+    "filter": {
+        "nationality": "국적 필터",
+        "type": "크리에이터 유형",
+        "sort": "정렬 기준",
+        "japan": "🇯🇵 일본",
+        "taiwan": "🇹🇼 대만",
+        "korea": "🇰🇷 한국",
+        "youtuber": "유튜버",
+        "vtuber": "VTuber",
+        "sort_subscribers": "구독자수",
+        "sort_views": "조회수",
+        "sort_engagement": "참여율"
+    },
+    "table": {
+        "rank": "#",
+        "channel": "채널",
+        "video_title": "영상 제목",
+        "views": "조회수",
+        "subscribers": "구독자수",
+        "engagement": "참여율",
+        "nationality": "국적",
+        "type": "유형",
+        "published": "게시일"
+    },
+    "badge": {
+        "pr": "협찬",
+        "sponsored": "광고"
+    },
+    "status": {
+        "loading": "데이터 로딩 중...",
+        "error": "불러오기 실패. 다시 시도해 주세요",
+        "empty": "협찬 영상을 찾을 수 없습니다",
+        "no_results": "조건에 맞는 결과가 없습니다"
+    },
+    "language": {
+        "zh-TW": "繁體中文",
+        "ja": "日本語",
+        "ko": "한국어"
+    }
+}

@@ -1,0 +1,43 @@
+{
+    "app_title": "StarLinker",
+    "app_subtitle": "YouTube 案件分析ダッシュボード",
+    "filter": {
+        "nationality": "国籍フィルター",
+        "type": "クリエイタータイプ",
+        "sort": "並び替え",
+        "japan": "🇯🇵 日本",
+        "taiwan": "🇹🇼 台湾",
+        "korea": "🇰🇷 韓国",
+        "youtuber": "YouTuber",
+        "vtuber": "VTuber",
+        "sort_subscribers": "登録者数",
+        "sort_views": "視聴数",
+        "sort_engagement": "エンゲージメント率"
+    },
+    "table": {
+        "rank": "#",
+        "channel": "チャンネル",
+        "video_title": "動画タイトル",
+        "views": "視聴数",
+        "subscribers": "登録者数",
+        "engagement": "エンゲージメント率",
+        "nationality": "国籍",
+        "type": "タイプ",
+        "published": "公開日"
+    },
+    "badge": {
+        "pr": "案件",
+        "sponsored": "PR"
+    },
+    "status": {
+        "loading": "データ読み込み中...",
+        "error": "読み込みに失敗しました。もう一度お試しください",
+        "empty": "案件動画が見つかりませんでした",
+        "no_results": "条件に一致する結果がありません"
+    },
+    "language": {
+        "zh-TW": "繁體中文",
+        "ja": "日本語",
+        "ko": "한국어"
+    }
+}

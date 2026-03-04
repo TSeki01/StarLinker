@@ -1,0 +1,364 @@
+{
+  "creators": [
+    {
+      "channel_id": "UCZf__ehlCEBPop-_sldpBUQ",
+      "name": "HikakinTV",
+      "nationality": "JP",
+      "type": "youtuber"
+    },
+    {
+      "channel_id": "UCgMPP6RRjktV7krOfyUewqw",
+      "name": "はじめしゃちょー",
+      "nationality": "JP",
+      "type": "youtuber"
+    },
+    {
+      "channel_id": "UCE7cDm1Hnry14-kOjfGQ1Gg",
+      "name": "Junya.じゅんや",
+      "nationality": "JP",
+      "type": "youtuber"
+    },
+    {
+      "channel_id": "UCibEhpu5HP45-w7Bq1ZIulw",
+      "name": "ISSEI / いっせい",
+      "nationality": "JP",
+      "type": "youtuber"
+    },
+    {
+      "channel_id": "UCRxPnp-x4ZEVhIMBj3NJ0Cg",
+      "name": "Sagawa / さがわ",
+      "nationality": "JP",
+      "type": "youtuber"
+    },
+    {
+      "channel_id": "UCLkAepWjdylmXSltofFvsYQ",
+      "name": "HIKAKIN",
+      "nationality": "JP",
+      "type": "youtuber"
+    },
+    {
+      "channel_id": "UCX1xppLvuj03ubLio8IEMFg",
+      "name": "Fischer's-フィッシャーズ-",
+      "nationality": "JP",
+      "type": "youtuber"
+    },
+    {
+      "channel_id": "UC1oPBUWifc0QOOY8DEKhLuQ",
+      "name": "東海オンエア",
+      "nationality": "JP",
+      "type": "youtuber"
+    },
+    {
+      "channel_id": "UCaak9sggUeIBPOd8iK_BXcQ",
+      "name": "きまぐれクック",
+      "nationality": "JP",
+      "type": "youtuber"
+    },
+    {
+      "channel_id": "UCHVXbQzkl3rDfsXWo8xi2qw",
+      "name": "料理研究家リュウジ",
+      "nationality": "JP",
+      "type": "youtuber"
+    },
+    {
+      "channel_id": "UCCzUftO8KOVkV4wQG1vkUvg",
+      "name": "宝鐘マリン",
+      "nationality": "JP",
+      "type": "vtuber"
+    },
+    {
+      "channel_id": "UC1DCedRgGHBdm81E1llLhOQ",
+      "name": "兎田ぺこら",
+      "nationality": "JP",
+      "type": "vtuber"
+    },
+    {
+      "channel_id": "UC-hM6YJuNYVAmUWxeIr9FeA",
+      "name": "さくらみこ",
+      "nationality": "JP",
+      "type": "vtuber"
+    },
+    {
+      "channel_id": "UCGzTVXqMQHa4AgJVJIVvtDQ",
+      "name": "綺々羅々ヴィヴィ",
+      "nationality": "JP",
+      "type": "vtuber"
+    },
+    {
+      "channel_id": "UCSFCh5NL4qXrAy9u-u2lX3g",
+      "name": "葛葉 Kuzuha",
+      "nationality": "JP",
+      "type": "vtuber"
+    },
+    {
+      "channel_id": "UC5CwaMl1eIgY8h02uZw7u8A",
+      "name": "星街すいせい",
+      "nationality": "JP",
+      "type": "vtuber"
+    },
+    {
+      "channel_id": "UCdn5BQ06XqgXoAxIhbqw5Rg",
+      "name": "白上フブキ",
+      "nationality": "JP",
+      "type": "vtuber"
+    },
+    {
+      "channel_id": "UCp-5t9SrOQwXMU7iIjQfARg",
+      "name": "戌神ころね",
+      "nationality": "JP",
+      "type": "vtuber"
+    },
+    {
+      "channel_id": "UCvInCOvMGfJab0TRtdp05kQ",
+      "name": "壱百満天原サロメ",
+      "nationality": "JP",
+      "type": "vtuber"
+    },
+    {
+      "channel_id": "UCUKD-uaobj9jiqB-VXt71mA",
+      "name": "叶 Kanae",
+      "nationality": "JP",
+      "type": "vtuber"
+    },
+    {
+      "channel_id": "UCIU8ha-NHmLjtUwU7dFiXUA",
+      "name": "奇軒Tricking",
+      "nationality": "TW",
+      "type": "youtuber"
+    },
+    {
+      "channel_id": "UCFp3s4_z8A4wPZtS0Fq30gQ",
+      "name": "這群人TGOP",
+      "nationality": "TW",
+      "type": "youtuber"
+    },
+    {
+      "channel_id": "UCtcaZ5FUqaNXGX6xhpiGPQA",
+      "name": "蔡阿嘎",
+      "nationality": "TW",
+      "type": "youtuber"
+    },
+    {
+      "channel_id": "UClee1FGhMVRBOFdBiYRmVaQ",
+      "name": "葉式特工 Yes Ranger",
+      "nationality": "TW",
+      "type": "youtuber"
+    },
+    {
+      "channel_id": "UCo70S_DiffWYhZF3YEb8HmA",
+      "name": "Jay Lee Painting",
+      "nationality": "TW",
+      "type": "youtuber"
+    },
+    {
+      "channel_id": "UCXWxyVKHdsTFpwVhSvi1eoA",
+      "name": "Pan Piano",
+      "nationality": "TW",
+      "type": "youtuber"
+    },
+    {
+      "channel_id": "UCcEat2jbDiIdrCstlVEKUoA",
+      "name": "Joeman",
+      "nationality": "TW",
+      "type": "youtuber"
+    },
+    {
+      "channel_id": "UCKjWb5JznagLLH4yvh7jmAQ",
+      "name": "阿滴英文",
+      "nationality": "TW",
+      "type": "youtuber"
+    },
+    {
+      "channel_id": "UCiWilzbgHEVH4JIzHokq2lg",
+      "name": "木曜4超玩",
+      "nationality": "TW",
+      "type": "youtuber"
+    },
+    {
+      "channel_id": "UC2YCPvxPMakDvUqKtPOejMA",
+      "name": "千千進食中",
+      "nationality": "TW",
+      "type": "youtuber"
+    },
+    {
+      "channel_id": "UCRf7OJA3azS4RsGd_G96FUw",
+      "name": "璐洛洛 Ruroro",
+      "nationality": "TW",
+      "type": "vtuber"
+    },
+    {
+      "channel_id": "UCu-J8uIXuLZh16gG-cT1naw",
+      "name": "李李鈴蘭 Lily",
+      "nationality": "TW",
+      "type": "vtuber"
+    },
+    {
+      "channel_id": "UCIG9rDtgR45VCZmYnd-4DUw",
+      "name": "SamoAgo",
+      "nationality": "TW",
+      "type": "vtuber"
+    },
+    {
+      "channel_id": "UCRbJv78j3dg62IGXT_aKmXQ",
+      "name": "烟花蹦蹦蹦",
+      "nationality": "TW",
+      "type": "vtuber"
+    },
+    {
+      "channel_id": "UCvEqq7-mMSEwIHqPtcSxrzw",
+      "name": "橙Yuzumi",
+      "nationality": "TW",
+      "type": "vtuber"
+    },
+    {
+      "channel_id": "UCwrjITPwG4q71HzihV2C7Nw",
+      "name": "幽李鈴",
+      "nationality": "TW",
+      "type": "vtuber"
+    },
+    {
+      "channel_id": "UCVzBijJmFpPCHRE2KmxJsOQ",
+      "name": "厄倫蒂兒 Earendel",
+      "nationality": "TW",
+      "type": "vtuber"
+    },
+    {
+      "channel_id": "UCb-EAKXN0HSmeh_4F8zyftw",
+      "name": "煌Kirali",
+      "nationality": "TW",
+      "type": "vtuber"
+    },
+    {
+      "channel_id": "UChB9M5sSS_pEL17OEbWsmdw",
+      "name": "煦Hiyori",
+      "nationality": "TW",
+      "type": "vtuber"
+    },
+    {
+      "channel_id": "UC04ksAdxBgJqy7_KxEKQ7Yg",
+      "name": "絲絲 SS Channel",
+      "nationality": "TW",
+      "type": "vtuber"
+    },
+    {
+      "channel_id": "UCiVs2pnGW5mLIc1jS2nxhjg",
+      "name": "김프로 KIMPRO",
+      "nationality": "KR",
+      "type": "youtuber"
+    },
+    {
+      "channel_id": "UCOmHUn--16B90oW2L6FRR3A",
+      "name": "BLACKPINK",
+      "nationality": "KR",
+      "type": "youtuber"
+    },
+    {
+      "channel_id": "UC3IZKseVpdzPSBo2Mk4c5cg",
+      "name": "HYBE LABELS",
+      "nationality": "KR",
+      "type": "youtuber"
+    },
+    {
+      "channel_id": "UC-9-kyTW8ZkZNDHQJ6FgpwQ",
+      "name": "1MILLION Dance Studio",
+      "nationality": "KR",
+      "type": "youtuber"
+    },
+    {
+      "channel_id": "UCe52oNTB4GsPqtJZ4dtqFHA",
+      "name": "ROSÉ",
+      "nationality": "KR",
+      "type": "youtuber"
+    },
+    {
+      "channel_id": "UCPNhCbg_200oFiOpS71Rpjw",
+      "name": "JFlaMusic",
+      "nationality": "KR",
+      "type": "youtuber"
+    },
+    {
+      "channel_id": "UChjFRkWoj5kOoTdo1CH1c3w",
+      "name": "Psick University",
+      "nationality": "KR",
+      "type": "youtuber"
+    },
+    {
+      "channel_id": "UCBkyj16n2snkRg1BAzpRMpg",
+      "name": "tzuyang 쯔양",
+      "nationality": "KR",
+      "type": "youtuber"
+    },
+    {
+      "channel_id": "UC2nkPb3sFU1rvJD0cMRO3bg",
+      "name": "침착맨",
+      "nationality": "KR",
+      "type": "youtuber"
+    },
+    {
+      "channel_id": "UCsJ6RuBiTVWElYEpOVdIB-w",
+      "name": "곽튜브 KWAKTUBE",
+      "nationality": "KR",
+      "type": "youtuber"
+    },
+    {
+      "channel_id": "UCBlPeSrPeyb2EY1WEfsdqoA",
+      "name": "주르르 Jururu",
+      "nationality": "KR",
+      "type": "vtuber"
+    },
+    {
+      "channel_id": "UCroM00J2ahCN6k-0-lAXp6g",
+      "name": "이세계아이돌 INE",
+      "nationality": "KR",
+      "type": "vtuber"
+    },
+    {
+      "channel_id": "UC-oCJP9a47IS-GtJIxSOkEA",
+      "name": "릴파 Lilpa",
+      "nationality": "KR",
+      "type": "vtuber"
+    },
+    {
+      "channel_id": "UCV9WL7sW6_KjanYkUUaIDfQ",
+      "name": "고세구 Gosegu",
+      "nationality": "KR",
+      "type": "vtuber"
+    },
+    {
+      "channel_id": "UCyJ68O4S60mXz92hLbC6scQ",
+      "name": "징버거 Jingburger",
+      "nationality": "KR",
+      "type": "vtuber"
+    },
+    {
+      "channel_id": "UCoRGFfPVqQf-jPfPj0AXSpg",
+      "name": "비챤 Viichan",
+      "nationality": "KR",
+      "type": "vtuber"
+    },
+    {
+      "channel_id": "UCOlpx8MVE7M3asQ-WcxBAFQ",
+      "name": "엘피스 린 Elpis Lin",
+      "nationality": "KR",
+      "type": "vtuber"
+    },
+    {
+      "channel_id": "UC_kypQga3FB57OJvfhE64lg",
+      "name": "숲튽훈 Soopteunhun",
+      "nationality": "KR",
+      "type": "vtuber"
+    },
+    {
+      "channel_id": "UCHox_X7HpWmRQR8mJ2qI1yA",
+      "name": "빙하유 BingHayu",
+      "nationality": "KR",
+      "type": "vtuber"
+    },
+    {
+      "channel_id": "UCcRaOqp5qGDT3Oh1pig-5rw",
+      "name": "아카네 리제 AKANE LIZE",
+      "nationality": "KR",
+      "type": "vtuber"
+    }
+  ]
+}

@@ -1,0 +1,145 @@
+import { useTranslation } from 'react-i18next';
+
+const NATIONALITIES = [
+    { code: 'JP', key: 'japan' },
+    { code: 'TW', key: 'taiwan' },
+    { code: 'KR', key: 'korea' },
+];
+
+const TYPES = [
+    { code: 'youtuber', key: 'youtuber' },
+    { code: 'vtuber', key: 'vtuber' },
+];
+
+const SORTS = [
+    { code: 'subscribers', key: 'sort_subscribers', icon: '👥' },
+    { code: 'views', key: 'sort_views', icon: '👁' },
+    { code: 'engagement', key: 'sort_engagement', icon: '⚡' },
+];
+
+export default function FilterBar({
+    filters,
+    onNationalityToggle,
+    onTypeToggle,
+    onSortChange,
+}) {
+    const { t } = useTranslation();
+
+    return (
+        <div
+            className="glass-card fade-in"
+            style={{ padding: '18px 24px', marginBottom: '20px' }}
+        >
+            <div
+                style={{
+                    display: 'flex',
+                    flexWrap: 'wrap',
+                    alignItems: 'center',
+                    gap: '20px',
+                }}
+            >
+                {/* Nationality Filter */}
+                <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                    <span
+                        style={{
+                            fontSize: '0.75rem',
+                            color: 'var(--color-text-muted)',
+                            fontWeight: '600',
+                            textTransform: 'uppercase',
+                            letterSpacing: '0.5px',
+                        }}
+                    >
+                        {t('filter.nationality')}
+                    </span>
+                    <div style={{ display: 'flex', gap: '6px' }}>
+                        {NATIONALITIES.map((nat) => (
+                            <button
+                                key={nat.code}
+                                id={`filter-nat-${nat.code}`}
+                                className={`filter-btn ${filters.nationality.includes(nat.code) ? 'filter-btn--active' : ''
+                                    }`}
+                                onClick={() => onNationalityToggle(nat.code)}
+                            >
+                                {t(`filter.${nat.key}`)}
+                            </button>
+                        ))}
+                    </div>
+                </div>
+
+                {/* Divider */}
+                <div
+                    style={{
+                        width: '1px',
+                        height: '28px',
+                        background: 'var(--color-border)',
+                    }}
+                />
+
+                {/* Type Filter */}
+                <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                    <span
+                        style={{
+                            fontSize: '0.75rem',
+                            color: 'var(--color-text-muted)',
+                            fontWeight: '600',
+                            textTransform: 'uppercase',
+                            letterSpacing: '0.5px',
+                        }}
+                    >
+                        {t('filter.type')}
+                    </span>
+                    <div style={{ display: 'flex', gap: '6px' }}>
+                        {TYPES.map((tp) => (
+                            <button
+                                key={tp.code}
+                                id={`filter-type-${tp.code}`}
+                                className={`filter-btn ${filters.creatorType === tp.code ? 'filter-btn--active' : ''
+                                    }`}
+                                onClick={() => onTypeToggle(tp.code)}
+                            >
+                                {t(`filter.${tp.key}`)}
+                            </button>
+                        ))}
+                    </div>
+                </div>
+
+                {/* Divider */}
+                <div
+                    style={{
+                        width: '1px',
+                        height: '28px',
+                        background: 'var(--color-border)',
+                    }}
+                />
+
+                {/* Sort Options */}
+                <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                    <span
+                        style={{
+                            fontSize: '0.75rem',
+                            color: 'var(--color-text-muted)',
+                            fontWeight: '600',
+                            textTransform: 'uppercase',
+                            letterSpacing: '0.5px',
+                        }}
+                    >
+                        {t('filter.sort')}
+                    </span>
+                    <div style={{ display: 'flex', gap: '4px' }}>
+                        {SORTS.map((sort) => (
+                            <button
+                                key={sort.code}
+                                id={`sort-${sort.code}`}
+                                className={`sort-btn ${filters.sortBy === sort.code ? 'sort-btn--active' : ''
+                                    }`}
+                                onClick={() => onSortChange(sort.code)}
+                            >
+                                {sort.icon} {t(`filter.${sort.key}`)}
+                            </button>
+                        ))}
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+}
