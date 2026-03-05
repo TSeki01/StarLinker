@@ -17,7 +17,7 @@ function App() {
     const [error, setError] = useState(null);
     const [filters, setFilters] = useState({
         nationality: 'TW',
-        creatorType: null,
+        creatorType: 'youtuber',
         sortBy: 'views',
     });
 
@@ -78,7 +78,7 @@ function App() {
     const handleTypeToggle = (type) => {
         setFilters((prev) => ({
             ...prev,
-            creatorType: prev.creatorType === type ? null : type,
+            creatorType: type,
         }));
     };
 
