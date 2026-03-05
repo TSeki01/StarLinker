@@ -163,7 +163,7 @@ export default function FilterBar({
                         display: 'flex',
                         alignItems: 'center',
                         gap: '8px',
-                        boxShadow: '0 4px 12px rgba(59, 130, 246, 0.3)',
+                        boxShadow: '0 4px 12px rgba(134, 203, 179, 0.3)',
                     }}
                 >
                     🔍 {loading ? t('status.loading_short', { defaultValue: '...' }) : t('filter.search')}

@@ -2,19 +2,19 @@
 
 /* ===== Custom Design Tokens ===== */
 :root {
-  --color-bg-primary: #0a0e1a;
-  --color-bg-secondary: #111827;
-  --color-bg-card: rgba(17, 24, 39, 0.7);
-  --color-bg-glass: rgba(255, 255, 255, 0.05);
-  --color-border: rgba(255, 255, 255, 0.08);
-  --color-border-hover: rgba(255, 255, 255, 0.15);
-  --color-text-primary: #f1f5f9;
-  --color-text-secondary: #94a3b8;
+  --color-bg-primary: #f8fafc;
+  --color-bg-secondary: #ffffff;
+  --color-bg-card: #ffffff;
+  --color-bg-glass: rgba(255, 255, 255, 0.85);
+  --color-border: rgba(58, 57, 57, 0.1);
+  --color-border-hover: rgba(134, 203, 179, 0.5);
+  --color-text-primary: #3A3939;
+  --color-text-secondary: #475569;
   --color-text-muted: #64748b;
-  --color-accent-blue: #3b82f6;
-  --color-accent-purple: #8b5cf6;
+  --color-accent-blue: #86CBB3;
+  --color-accent-purple: #86CBB3;
   --color-accent-pink: #ec4899;
-  --color-accent-cyan: #06b6d4;
+  --color-accent-cyan: #86CBB3;
   --color-pr-badge: linear-gradient(135deg, #f43f5e, #f97316);
   --color-jp: #ef4444;
   --color-tw: #22c55e;
@@ -55,9 +55,9 @@ body::before {
   width: 100%;
   height: 100%;
   background: 
-    radial-gradient(ellipse at 20% 0%, rgba(59, 130, 246, 0.08) 0%, transparent 50%),
-    radial-gradient(ellipse at 80% 20%, rgba(139, 92, 246, 0.06) 0%, transparent 50%),
-    radial-gradient(ellipse at 50% 80%, rgba(236, 72, 153, 0.04) 0%, transparent 50%);
+    radial-gradient(ellipse at 20% 0%, rgba(134, 203, 179, 0.15) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(134, 203, 179, 0.1) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 80%, rgba(255, 255, 255, 0.8) 0%, transparent 50%);
   pointer-events: none;
   z-index: 0;
 }
@@ -74,12 +74,13 @@ body::before {
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
   transition: all 0.3s ease;
 }
 
 .glass-card:hover {
   border-color: var(--color-border-hover);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 25px rgba(134, 203, 179, 0.15);
 }
 
 /* ===== PR Badge ===== */
@@ -133,15 +134,15 @@ body::before {
 
 .filter-btn:hover {
   border-color: var(--color-accent-blue);
-  color: var(--color-text-primary);
-  background: rgba(59, 130, 246, 0.1);
+  color: var(--color-accent-blue);
+  background: rgba(134, 203, 179, 0.08);
 }
 
 .filter-btn--active {
   border-color: var(--color-accent-blue);
-  color: var(--color-accent-blue);
-  background: rgba(59, 130, 246, 0.15);
-  box-shadow: 0 0 12px rgba(59, 130, 246, 0.2);
+  color: white;
+  background: var(--color-accent-blue);
+  box-shadow: 0 4px 10px rgba(134, 203, 179, 0.3);
 }
 
 /* ===== Sort Button ===== */
@@ -160,19 +161,19 @@ body::before {
 
 .sort-btn:hover {
   color: var(--color-text-primary);
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(58, 57, 57, 0.05);
 }
 
 .sort-btn--active {
-  color: var(--color-accent-cyan);
-  background: rgba(6, 182, 212, 0.1);
+  color: var(--color-accent-blue);
+  background: rgba(134, 203, 179, 0.15);
 }
 
 /* ===== Language Selector ===== */
 .lang-selector {
   display: flex;
   gap: 2px;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(58, 57, 57, 0.03);
   border-radius: var(--radius-md);
   padding: 2px;
   border: 1px solid var(--color-border);
@@ -196,8 +197,9 @@ body::before {
 }
 
 .lang-btn--active {
-  background: rgba(139, 92, 246, 0.2);
-  color: var(--color-accent-purple);
+  background: #ffffff;
+  color: var(--color-accent-blue);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
 /* ===== Video Row ===== */
@@ -212,7 +214,7 @@ body::before {
 }
 
 .video-row:hover {
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(134, 203, 179, 0.05);
 }
 
 .video-row:last-child {
@@ -222,9 +224,9 @@ body::before {
 /* ===== Loading Skeleton ===== */
 .skeleton {
   background: linear-gradient(90deg,
-    rgba(255, 255, 255, 0.05) 25%,
-    rgba(255, 255, 255, 0.1) 50%,
-    rgba(255, 255, 255, 0.05) 75%
+    rgba(58, 57, 57, 0.05) 25%,
+    rgba(58, 57, 57, 0.1) 50%,
+    rgba(58, 57, 57, 0.05) 75%
   );
   background-size: 200% 100%;
   animation: shimmer 1.5s infinite;
@@ -253,12 +255,12 @@ body::before {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(58, 57, 57, 0.15);
   border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(58, 57, 57, 0.25);
 }
 
 /* ===== Responsive ===== */

@@ -28,13 +28,14 @@ export default function Header() {
                         width: '42px',
                         height: '42px',
                         borderRadius: 'var(--radius-md)',
-                        background: 'linear-gradient(135deg, #8b5cf6, #3b82f6, #06b6d4)',
+                        background: 'var(--color-accent-blue)',
+                        color: 'white',
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
                         fontSize: '20px',
                         fontWeight: '800',
-                        boxShadow: '0 4px 16px rgba(139, 92, 246, 0.3)',
+                        boxShadow: '0 4px 16px rgba(134, 203, 179, 0.4)',
                     }}
                 >
                     ✦
@@ -45,9 +46,7 @@ export default function Header() {
                             fontSize: '1.5rem',
                             fontWeight: '800',
                             letterSpacing: '-0.5px',
-                            background: 'linear-gradient(135deg, #f1f5f9, #94a3b8)',
-                            WebkitBackgroundClip: 'text',
-                            WebkitTextFillColor: 'transparent',
+                            color: 'var(--color-text-primary)',
                             lineHeight: 1.2,
                         }}
                     >

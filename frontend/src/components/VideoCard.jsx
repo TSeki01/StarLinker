@@ -90,8 +90,8 @@ export default function VideoCard({ result, rank }) {
                                 style={{
                                     fontSize: '0.6rem',
                                     fontWeight: '600',
-                                    color: 'var(--color-accent-purple)',
-                                    background: 'rgba(139, 92, 246, 0.15)',
+                                    color: 'white',
+                                    background: 'var(--color-accent-blue)',
                                     padding: '1px 6px',
                                     borderRadius: '10px',
                                     letterSpacing: '0.3px',
@@ -121,8 +121,9 @@ export default function VideoCard({ result, rank }) {
                         target="_blank"
                         rel="noopener noreferrer"
                         style={{
-                            fontSize: '0.82rem',
-                            color: 'var(--color-text-secondary)',
+                            fontSize: '0.85rem',
+                            fontWeight: '600',
+                            color: 'var(--color-text-primary)',
                             textDecoration: 'none',
                             overflow: 'hidden',
                             textOverflow: 'ellipsis',
@@ -165,10 +166,10 @@ export default function VideoCard({ result, rank }) {
                     textAlign: 'right',
                     color:
                         engagement_rate > 100
-                            ? 'var(--color-accent-pink)'
+                            ? 'var(--color-jp)'
                             : engagement_rate > 50
-                                ? 'var(--color-accent-cyan)'
-                                : 'var(--color-text-secondary)',
+                                ? 'var(--color-accent-blue)'
+                                : 'var(--color-text-secondary)'
                 }}
             >
                 {engagement_rate.toFixed(1)}%

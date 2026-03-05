@@ -39,13 +39,13 @@ export default function RankingList({ results, loading, loadingSlow, hasSearched
                 {loadingSlow && (
                     <div style={{
                         position: 'absolute', top: 0, left: 0, right: 0, bottom: 0,
-                        background: 'rgba(10, 15, 30, 0.8)',
+                        background: 'rgba(255, 255, 255, 0.8)',
                         backdropFilter: 'blur(4px)',
                         display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
                         zIndex: 20, textAlign: 'center', padding: '24px'
                     }}>
                         <div className="skeleton" style={{ width: '40px', height: '40px', borderRadius: '50%', marginBottom: '16px' }} />
-                        <h3 style={{ color: 'white', fontSize: '1.1rem', marginBottom: '8px' }}>{t('status.loading_slow_title')}</h3>
+                        <h3 style={{ color: 'var(--color-text-primary)', fontSize: '1.1rem', marginBottom: '8px' }}>{t('status.loading_slow_title')}</h3>
                         <p style={{ color: 'var(--color-text-secondary)', fontSize: '0.9rem', maxWidth: '300px' }}>
                             {t('status.loading_slow_desc')}
                         </p>
@@ -59,7 +59,7 @@ export default function RankingList({ results, loading, loadingSlow, hasSearched
                         gap: '12px',
                         padding: '12px 20px',
                         borderBottom: '1px solid var(--color-border)',
-                        background: 'rgba(0,0,0,0.2)',
+                        background: 'rgba(255,255,255,0.5)',
                     }}
                 >
                     <span style={{ fontSize: '0.72rem', color: 'var(--color-text-muted)', fontWeight: '600' }}>{t('table.rank')}</span>
@@ -171,7 +171,7 @@ export default function RankingList({ results, loading, loadingSlow, hasSearched
                     gap: '12px',
                     padding: '12px 20px',
                     borderBottom: '1px solid var(--color-border)',
-                    background: 'rgba(0,0,0,0.2)',
+                    background: 'rgba(255,255,255,0.95)',
                     position: 'sticky',
                     top: 0,
                     zIndex: 10,
@@ -207,7 +207,7 @@ export default function RankingList({ results, loading, loadingSlow, hasSearched
                 style={{
                     padding: '12px 20px',
                     borderTop: '1px solid var(--color-border)',
-                    background: 'rgba(0,0,0,0.1)',
+                    background: 'rgba(255,255,255,0.5)',
                     display: 'flex',
                     justifyContent: 'space-between',
                     alignItems: 'center',
