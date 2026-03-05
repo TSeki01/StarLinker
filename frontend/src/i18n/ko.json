@@ -22,6 +22,7 @@
         "views": "조회수",
         "subscribers": "구독자수",
         "engagement": "참여율",
+        "engagement_tooltip": "조회수 ÷ 구독자수.\n기존 구독자층 중 어느 정도가 시청했는지를 나타냅니다.\n100% 이상인 경우 반복 시청되었거나 구독자 외의 시청자에게도 널리 노출되었음을 의미합니다.",
         "nationality": "국적",
         "type": "유형",
         "published": "게시일"

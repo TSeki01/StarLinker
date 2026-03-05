@@ -22,6 +22,7 @@
         "views": "觀看數",
         "subscribers": "訂閱數",
         "engagement": "互動率",
+        "engagement_tooltip": "觀看數 ÷ 訂閱數。\n此指標顯示有多少比例的常態訂閱者觀看了影片。\n若大於 100%，表示影片被重複觀看，或成功觸及了訂閱者以外的廣大觀眾。",
         "nationality": "國籍",
         "type": "類型",
         "published": "發布日期"

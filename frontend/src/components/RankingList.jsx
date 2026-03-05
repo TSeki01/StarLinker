@@ -67,7 +67,9 @@ export default function RankingList({ results, loading, loadingSlow, hasSearched
                     <span style={{ fontSize: '0.72rem', color: 'var(--color-text-muted)', fontWeight: '600' }}>{t('table.video_title')}</span>
                     <span style={{ fontSize: '0.72rem', color: 'var(--color-text-muted)', fontWeight: '600', textAlign: 'right' }}>{t('table.views')}</span>
                     <span style={{ fontSize: '0.72rem', color: 'var(--color-text-muted)', fontWeight: '600', textAlign: 'right' }}>{t('table.subscribers')}</span>
-                    <span style={{ fontSize: '0.72rem', color: 'var(--color-text-muted)', fontWeight: '600', textAlign: 'right' }}>{t('table.engagement')}</span>
+                    <span style={{ fontSize: '0.72rem', color: 'var(--color-text-muted)', fontWeight: '600', textAlign: 'right', display: 'flex', alignItems: 'center', justifyContent: 'flex-end' }}>
+                        {t('table.engagement')}
+                    </span>
                 </div>
                 {/* Skeleton Rows */}
                 {Array.from({ length: 8 }).map((_, i) => (
@@ -196,8 +198,12 @@ export default function RankingList({ results, loading, loadingSlow, hasSearched
                     <span style={{ fontSize: '0.72rem', color: sortBy === 'subscribers' ? 'var(--color-accent-blue)' : 'var(--color-text-muted)', fontWeight: '600', textTransform: 'uppercase', letterSpacing: '0.5px', textAlign: 'right' }}>
                         {t('table.subscribers')} {sortBy === 'subscribers' && '▼'}
                     </span>
-                    <span style={{ fontSize: '0.72rem', color: sortBy === 'engagement' ? 'var(--color-accent-blue)' : 'var(--color-text-muted)', fontWeight: '600', textTransform: 'uppercase', letterSpacing: '0.5px', textAlign: 'right' }}>
+                    <span style={{ fontSize: '0.72rem', color: sortBy === 'engagement' ? 'var(--color-accent-blue)' : 'var(--color-text-muted)', fontWeight: '600', textTransform: 'uppercase', letterSpacing: '0.5px', textAlign: 'right', display: 'flex', alignItems: 'center', justifyContent: 'flex-end' }}>
                         {t('table.engagement')} {sortBy === 'engagement' && '▼'}
+                        <div className="tooltip-container">
+                            <span className="tooltip-icon">ⓘ</span>
+                            <span className="tooltip-text">{t('table.engagement_tooltip')}</span>
+                        </div>
                     </span>
                 </div>
 
