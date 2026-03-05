@@ -7,7 +7,7 @@ YOUTUBE_API_KEY = os.getenv("YOUTUBE_API_KEY", "")
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "")
 
 # How many days back to search for videos
-DAYS_BACK = 10
+DAYS_BACK = 30
 
 # Max description chars to send to Gemini (token-saving)
 MAX_DESCRIPTION_LENGTH = 200

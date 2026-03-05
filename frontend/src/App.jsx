@@ -16,7 +16,7 @@ function App() {
     const [hasSearched, setHasSearched] = useState(false);
     const [error, setError] = useState(null);
     const [filters, setFilters] = useState({
-        nationality: ['JP', 'TW', 'KR'],
+        nationality: 'JP',
         creatorType: null,
         sortBy: 'views',
     });
@@ -34,8 +34,8 @@ function App() {
 
         try {
             const params = new URLSearchParams();
-            if (filters.nationality.length > 0 && filters.nationality.length < 3) {
-                params.set('nationality', filters.nationality.join(','));
+            if (filters.nationality) {
+                params.set('nationality', filters.nationality);
             }
             if (filters.creatorType) {
                 params.set('creator_type', filters.creatorType);
@@ -71,17 +71,8 @@ function App() {
         setFilters((prev) => ({ ...prev, [key]: value }));
     };
 
-    const handleNationalityToggle = (nat) => {
-        setFilters((prev) => {
-            const current = [...prev.nationality];
-            const idx = current.indexOf(nat);
-            if (idx >= 0) {
-                if (current.length > 1) current.splice(idx, 1);
-            } else {
-                current.push(nat);
-            }
-            return { ...prev, nationality: current };
-        });
+    const handleNationalityChange = (nat) => {
+        setFilters((prev) => ({ ...prev, nationality: nat }));
     };
 
     const handleTypeToggle = (type) => {
@@ -98,7 +89,7 @@ function App() {
 
                 <FilterBar
                     filters={filters}
-                    onNationalityToggle={handleNationalityToggle}
+                    onNationalityChange={handleNationalityChange}
                     onTypeToggle={handleTypeToggle}
                     onSortChange={(sort) => handleFilterChange('sortBy', sort)}
                     onSearch={fetchData}

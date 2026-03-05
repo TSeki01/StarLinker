@@ -19,7 +19,7 @@ const SORTS = [
 
 export default function FilterBar({
     filters,
-    onNationalityToggle,
+    onNationalityChange,
     onTypeToggle,
     onSortChange,
     onSearch,
@@ -58,9 +58,9 @@ export default function FilterBar({
                             <button
                                 key={nat.code}
                                 id={`filter-nat-${nat.code}`}
-                                className={`filter-btn ${filters.nationality.includes(nat.code) ? 'filter-btn--active' : ''
+                                className={`filter-btn ${filters.nationality === nat.code ? 'filter-btn--active' : ''
                                     }`}
-                                onClick={() => onNationalityToggle(nat.code)}
+                                onClick={() => onNationalityChange(nat.code)}
                             >
                                 {t(`filter.${nat.key}`)}
                             </button>

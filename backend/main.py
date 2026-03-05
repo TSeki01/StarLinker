@@ -95,18 +95,33 @@ async def get_sponsored_videos(
             profile_image_url=stats.get("profile_image_url", ""),
         )
 
-    # Fetch recent videos for all creators (concurrently in batches)
+    # Fetch all videos globally to batch AI limits
     results: list[SponsoredVideoResult] = []
+    
+    all_ambiguous_videos = []
+    video_to_creator = {}
 
-    async def process_creator(creator: Creator):
-        local_results = []
-        videos = get_recent_videos(creator.channel_id)
-        if not videos:
-            return local_results
-
-        ambiguous_videos = []
+    # We can fetch videos concurrently, but youtube API allows blocking calls
+    def fetch_for_creator(creator: Creator):
+        return creator, get_recent_videos(creator.channel_id)
         
-        # Step 1: Fast keyword filter
+    loop = asyncio.get_running_loop()
+    creator_list = list(creators_map.values())
+    fetch_tasks = [
+        loop.run_in_executor(None, fetch_for_creator, c)
+        for c in creator_list
+    ]
+    fetch_results = await asyncio.gather(*fetch_tasks, return_exceptions=True)
+    
+    for fr in fetch_results:
+        if isinstance(fr, Exception):
+            logger.error(f"Error fetching videos: {fr}")
+            continue
+            
+        creator, videos = fr
+        if not videos:
+            continue
+            
         for video in videos:
             if keyword_pre_filter(video.title, video.description):
                 video.is_sponsored = True
@@ -114,7 +129,7 @@ async def get_sponsored_videos(
                 
                 sub_count = creator.subscriber_count
                 engagement = (video.view_count / sub_count * 100) if sub_count > 0 else 0
-                local_results.append(
+                results.append(
                     SponsoredVideoResult(
                         creator=creator,
                         video=video,
@@ -122,41 +137,29 @@ async def get_sponsored_videos(
                     )
                 )
             else:
-                ambiguous_videos.append(video)
-
-        # Step 2: Batch process remaining videos with Gemini (max 15 RPM so we batch)
-        if ambiguous_videos:
-            # We can process up to 30 videos in one prompt safely
-            for i in range(0, len(ambiguous_videos), 30):
-                batch = ambiguous_videos[i : i + 30]
-                processed_batch = await batch_gemini_judge_sponsored(batch)
+                all_ambiguous_videos.append(video)
+                video_to_creator[video.video_id] = creator
                 
-                for video in processed_batch:
-                    if video.is_sponsored:
+    # Step 2: Global Batch Process for all remaining videos
+    # Batch size increased to 50 to definitively stay under 15 RPM even for 30 days
+    if all_ambiguous_videos:
+        for i in range(0, len(all_ambiguous_videos), 50):
+            batch = all_ambiguous_videos[i : i + 50]
+            processed_batch = await batch_gemini_judge_sponsored(batch)
+            
+            for video in processed_batch:
+                if video.is_sponsored:
+                    creator = video_to_creator.get(video.video_id)
+                    if creator:
                         sub_count = creator.subscriber_count
                         engagement = (video.view_count / sub_count * 100) if sub_count > 0 else 0
-                        local_results.append(
+                        results.append(
                             SponsoredVideoResult(
                                 creator=creator,
                                 video=video,
                                 engagement_rate=round(engagement, 2),
                             )
                         )
-                        
-        return local_results
-
-    # Process in batches of 5 to avoid rate limits
-    batch_size = 5
-    creator_list = list(creators_map.values())
-    for i in range(0, len(creator_list), batch_size):
-        batch = creator_list[i : i + batch_size]
-        tasks = [process_creator(c) for c in batch]
-        batch_results = await asyncio.gather(*tasks, return_exceptions=True)
-        for br in batch_results:
-            if isinstance(br, list):
-                results.extend(br)
-            elif isinstance(br, Exception):
-                logger.error(f"Error processing creator: {br}")
 
     # Sort results
     if sort_by == "subscribers":
