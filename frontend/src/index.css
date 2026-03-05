@@ -353,9 +353,9 @@ body::before {
   padding: 10px 12px;
   position: absolute;
   z-index: 50;
-  bottom: 125%;
+  top: 150%;
   left: 50%;
-  transform: translateX(-50%) translateY(10px);
+  transform: translateX(-50%) translateY(-10px);
   opacity: 0;
   transition: opacity 0.3s, transform 0.3s;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
@@ -371,13 +371,13 @@ body::before {
 .tooltip-text::after {
   content: "";
   position: absolute;
-  top: 100%;
+  bottom: 100%;
   left: 50%;
   margin-left: -6px;
   border-width: 6px;
   border-style: solid;
-  border-color: var(--color-bg-secondary) transparent transparent transparent;
-  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.05));
+  border-color: transparent transparent var(--color-bg-secondary) transparent;
+  filter: drop-shadow(0 -1px 1px rgba(0, 0, 0, 0.05));
 }
 
 .tooltip-container:hover .tooltip-text {

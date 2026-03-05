@@ -34,7 +34,7 @@ export default function RankingList({ results, loading, loadingSlow, hasSearched
     // Loading skeleton
     if (loading) {
         return (
-            <div className="glass-card slide-up" style={{ padding: '0', overflow: 'hidden' }}>
+            <div className="glass-card slide-up" style={{ padding: '0' }}>
                 {/* Slow Loading Indicator overlay */}
                 {loadingSlow && (
                     <div style={{
@@ -60,6 +60,8 @@ export default function RankingList({ results, loading, loadingSlow, hasSearched
                         padding: '12px 20px',
                         borderBottom: '1px solid var(--color-border)',
                         background: 'rgba(255,255,255,0.5)',
+                        borderTopLeftRadius: 'var(--radius-lg)',
+                        borderTopRightRadius: 'var(--radius-lg)',
                     }}
                 >
                     <span style={{ fontSize: '0.72rem', color: 'var(--color-text-muted)', fontWeight: '600' }}>{t('table.rank')}</span>
@@ -168,7 +170,7 @@ export default function RankingList({ results, loading, loadingSlow, hasSearched
             <div style={{ padding: '0 0 16px 8px', fontSize: '1.05rem', color: 'var(--color-text-primary)' }}>
                 {t('status.result_count_message', { count: results.length })}
             </div>
-            <div className="glass-card slide-up" style={{ padding: '0', overflow: 'hidden' }}>
+            <div className="glass-card slide-up" style={{ padding: '0' }}>
                 {/* Header Row */}
                 <div
                     style={{
@@ -181,6 +183,8 @@ export default function RankingList({ results, loading, loadingSlow, hasSearched
                         position: 'sticky',
                         top: 0,
                         zIndex: 10,
+                        borderTopLeftRadius: 'var(--radius-lg)',
+                        borderTopRightRadius: 'var(--radius-lg)',
                     }}
                 >
                     <span style={{ fontSize: '0.72rem', color: 'var(--color-text-muted)', fontWeight: '600', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
@@ -221,6 +225,8 @@ export default function RankingList({ results, loading, loadingSlow, hasSearched
                         display: 'flex',
                         justifyContent: 'space-between',
                         alignItems: 'center',
+                        borderBottomLeftRadius: 'var(--radius-lg)',
+                        borderBottomRightRadius: 'var(--radius-lg)',
                     }}
                 >
                     <span style={{ fontSize: '0.72rem', color: 'var(--color-text-muted)' }}>
