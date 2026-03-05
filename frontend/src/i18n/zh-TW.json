@@ -1,6 +1,6 @@
 {
-    "app_title": "StarLinker",
-    "app_subtitle": "YouTube 業配分析儀表板",
+    "app_title": "Monthly Star Promo",
+    "app_subtitle": "近一個月內日台韓知名 60 名 Youtuber / VTuber 的業配內容搜尋，經 AI 分析後僅列出業配影片",
     "filter": {
         "nationality": "國籍篩選",
         "type": "創作者類型",
@@ -16,7 +16,7 @@
         "search": "搜尋"
     },
     "table": {
-        "rank": "#",
+        "rank": "results",
         "channel": "頻道",
         "video_title": "影片標題",
         "views": "觀看數",

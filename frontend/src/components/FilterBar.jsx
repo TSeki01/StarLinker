@@ -12,8 +12,8 @@ const TYPES = [
 ];
 
 const SORTS = [
-    { code: 'subscribers', key: 'sort_subscribers', icon: '👥' },
     { code: 'views', key: 'sort_views', icon: '👁' },
+    { code: 'subscribers', key: 'sort_subscribers', icon: '👥' },
     { code: 'engagement', key: 'sort_engagement', icon: '⚡' },
 ];
 

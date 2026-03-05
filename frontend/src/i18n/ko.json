@@ -1,6 +1,6 @@
 {
-    "app_title": "StarLinker",
-    "app_subtitle": "YouTube 협찬 분석 대시보드",
+    "app_title": "Monthly Star Promo",
+    "app_subtitle": "최근 1개월 내 한·일·대만 유명 유튜버/버튜버 60명의 협찬 콘텐츠를 검색하고, AI 분석 후 협찬 영상만 목록 표시",
     "filter": {
         "nationality": "국적 필터",
         "type": "크리에이터 유형",
@@ -16,7 +16,7 @@
         "search": "검색"
     },
     "table": {
-        "rank": "#",
+        "rank": "results",
         "channel": "채널",
         "video_title": "영상 제목",
         "views": "조회수",

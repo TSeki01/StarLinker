@@ -1,6 +1,6 @@
 {
-    "app_title": "StarLinker",
-    "app_subtitle": "YouTube 案件分析ダッシュボード",
+    "app_title": "Monthly Star Promo",
+    "app_subtitle": "直近一か月内における日台韓の有名なVtuber Youtuber 60名の案件配信をYoutube検索し、AIで案件非案件を分析し、案件のみを一覧表示",
     "filter": {
         "nationality": "国籍フィルター",
         "type": "クリエイタータイプ",
@@ -16,7 +16,7 @@
         "search": "検索"
     },
     "table": {
-        "rank": "#",
+        "rank": "results",
         "channel": "チャンネル",
         "video_title": "動画タイトル",
         "views": "視聴数",

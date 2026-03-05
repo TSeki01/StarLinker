@@ -217,7 +217,7 @@ export default function RankingList({ results, loading, loadingSlow, hasSearched
                     {results.length} results
                 </span>
                 <span style={{ fontSize: '0.68rem', color: 'var(--color-text-muted)' }}>
-                    StarLinker ✦ Sponsored Content Analytics
+                    Monthly Star Promo ✦ Sponsored Content Analytics
                 </span>
             </div>
         </div>
