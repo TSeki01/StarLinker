@@ -9,7 +9,7 @@ from typing import Optional
 from config import CORS_ORIGINS
 from models import Creator, SponsoredVideoResult
 from youtube_service import get_channel_stats, get_recent_videos
-from gemini_service import detect_sponsored
+from gemini_service import keyword_pre_filter, batch_gemini_judge_sponsored
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -101,14 +101,19 @@ async def get_sponsored_videos(
     async def process_creator(creator: Creator):
         local_results = []
         videos = get_recent_videos(creator.channel_id)
+        if not videos:
+            return local_results
+
+        ambiguous_videos = []
+        
+        # Step 1: Fast keyword filter
         for video in videos:
-            # Run sponsored detection
-            video = await detect_sponsored(video)
-            if video.is_sponsored:
+            if keyword_pre_filter(video.title, video.description):
+                video.is_sponsored = True
+                video.sponsor_confidence = 0.95
+                
                 sub_count = creator.subscriber_count
-                engagement = (
-                    (video.view_count / sub_count * 100) if sub_count > 0 else 0
-                )
+                engagement = (video.view_count / sub_count * 100) if sub_count > 0 else 0
                 local_results.append(
                     SponsoredVideoResult(
                         creator=creator,
@@ -116,6 +121,28 @@ async def get_sponsored_videos(
                         engagement_rate=round(engagement, 2),
                     )
                 )
+            else:
+                ambiguous_videos.append(video)
+
+        # Step 2: Batch process remaining videos with Gemini (max 15 RPM so we batch)
+        if ambiguous_videos:
+            # We can process up to 30 videos in one prompt safely
+            for i in range(0, len(ambiguous_videos), 30):
+                batch = ambiguous_videos[i : i + 30]
+                processed_batch = await batch_gemini_judge_sponsored(batch)
+                
+                for video in processed_batch:
+                    if video.is_sponsored:
+                        sub_count = creator.subscriber_count
+                        engagement = (video.view_count / sub_count * 100) if sub_count > 0 else 0
+                        local_results.append(
+                            SponsoredVideoResult(
+                                creator=creator,
+                                video=video,
+                                engagement_rate=round(engagement, 2),
+                            )
+                        )
+                        
         return local_results
 
     # Process in batches of 5 to avoid rate limits
