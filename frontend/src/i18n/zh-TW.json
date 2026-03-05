@@ -31,6 +31,9 @@
         "sponsored": "贊助"
     },
     "status": {
+        "welcome_title": "開始分析 YouTube 業配內容",
+        "welcome_desc1": "本網站能夠協助您從知名 YouTuber 與 VTuber 近期的影片中，透過 AI 自動篩選出「業配/贊助」的推廣內容。",
+        "welcome_desc2": "請從上方選擇國籍、創作者類型與排序方式，然後點擊【🔍 搜尋】按鈕。系統將即時取得最新資料並由 AI 進行分析，最多約需等待 10 秒鐘。",
         "loading": "資料載入中...",
         "loading_slow_title": "後端資料收集中...",
         "loading_slow_desc": "正在使用 YouTube API 和 Gemini AI 分析業配內容，最多請稍候約 10 秒。",

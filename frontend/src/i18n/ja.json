@@ -31,6 +31,9 @@
         "sponsored": "PR"
     },
     "status": {
+        "welcome_title": "YouTube 案件分析を始めましょう",
+        "welcome_desc1": "このサイトでは、著名なYouTuberやVTuberの直近の投稿から「案件動画（PR/スポンサー付き再生）」のみをAIが自動抽出して表示します。",
+        "welcome_desc2": "上部のフィルターから国籍、クリエイターのタイプ、並び替え順を選択し、【🔍 検索】ボタンを押してください。最新データの取得とAI解析のため、検索には最大10秒程度かかります。",
         "loading": "データ読み込み中...",
         "loading_slow_title": "バックエンドでデータ収集中...",
         "loading_slow_desc": "YouTube APIとGemini AIで案件を分析しています。最大10秒程度お待ちください。",

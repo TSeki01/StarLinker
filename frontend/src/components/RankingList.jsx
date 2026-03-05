@@ -1,8 +1,35 @@
 import { useTranslation } from 'react-i18next';
 import VideoCard from './VideoCard';
 
-export default function RankingList({ results, loading, loadingSlow, error, sortBy, onRetry }) {
+export default function RankingList({ results, loading, loadingSlow, hasSearched, error, sortBy, onRetry }) {
     const { t } = useTranslation();
+
+    // Initial Welcome State
+    if (!hasSearched) {
+        return (
+            <div
+                className="glass-card slide-up"
+                style={{
+                    padding: '64px 24px',
+                    textAlign: 'center',
+                    maxWidth: '800px',
+                    margin: '0 auto',
+                    marginTop: '40px'
+                }}
+            >
+                <div style={{ fontSize: '3.5rem', marginBottom: '20px' }}>🌟</div>
+                <h2 style={{ color: 'var(--color-text-primary)', fontSize: '1.4rem', marginBottom: '16px', fontWeight: 'bold' }}>
+                    {t('status.welcome_title')}
+                </h2>
+                <p style={{ color: 'var(--color-text-secondary)', fontSize: '0.95rem', lineHeight: '1.6', marginBottom: '12px' }}>
+                    {t('status.welcome_desc1')}
+                </p>
+                <p style={{ color: 'var(--color-text-secondary)', fontSize: '0.95rem', lineHeight: '1.6' }}>
+                    {t('status.welcome_desc2')}
+                </p>
+            </div>
+        );
+    }
 
     // Loading skeleton
     if (loading) {

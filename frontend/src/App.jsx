@@ -13,6 +13,7 @@ function App() {
     const [results, setResults] = useState([]);
     const [loading, setLoading] = useState(false);
     const [loadingSlow, setLoadingSlow] = useState(false);
+    const [hasSearched, setHasSearched] = useState(false);
     const [error, setError] = useState(null);
     const [filters, setFilters] = useState({
         nationality: ['JP', 'TW', 'KR'],
@@ -21,6 +22,7 @@ function App() {
     });
 
     const fetchData = async () => {
+        setHasSearched(true);
         setLoading(true);
         setLoadingSlow(false);
         setError(null);
@@ -60,9 +62,9 @@ function App() {
         }
     };
 
+    // Remove initial fetch so it starts blank
     useEffect(() => {
-        fetchData();
-        // eslint-disable-next-line react-hooks/exhaustive-deps
+        // Just empty, waiting for user to click Search
     }, []);
 
     const handleFilterChange = (key, value) => {
@@ -107,6 +109,7 @@ function App() {
                     results={results}
                     loading={loading}
                     loadingSlow={loadingSlow}
+                    hasSearched={hasSearched}
                     error={error}
                     sortBy={filters.sortBy}
                     onRetry={fetchData}
