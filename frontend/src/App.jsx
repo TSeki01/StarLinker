@@ -47,7 +47,7 @@ function App() {
                 }
                 throw new Error(`${t('status.error')} (HTTP ${response.status})`);
             }
-            
+
             const data = await response.json();
             setResults(data.results || []);
         } catch (err) {
@@ -62,7 +62,8 @@ function App() {
 
     useEffect(() => {
         fetchData();
-    }, [filters]);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
     const handleFilterChange = (key, value) => {
         setFilters((prev) => ({ ...prev, [key]: value }));
@@ -98,6 +99,8 @@ function App() {
                     onNationalityToggle={handleNationalityToggle}
                     onTypeToggle={handleTypeToggle}
                     onSortChange={(sort) => handleFilterChange('sortBy', sort)}
+                    onSearch={fetchData}
+                    loading={loading}
                 />
 
                 <RankingList

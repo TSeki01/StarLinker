@@ -12,7 +12,8 @@
         "vtuber": "VTuber",
         "sort_subscribers": "구독자수",
         "sort_views": "조회수",
-        "sort_engagement": "참여율"
+        "sort_engagement": "참여율",
+        "search": "검색"
     },
     "table": {
         "rank": "#",

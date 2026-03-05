@@ -12,7 +12,8 @@
         "vtuber": "VTuber",
         "sort_subscribers": "登録者数",
         "sort_views": "視聴数",
-        "sort_engagement": "エンゲージメント率"
+        "sort_engagement": "エンゲージメント率",
+        "search": "検索"
     },
     "table": {
         "rank": "#",

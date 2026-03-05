@@ -22,6 +22,8 @@ export default function FilterBar({
     onNationalityToggle,
     onTypeToggle,
     onSortChange,
+    onSearch,
+    loading,
 }) {
     const { t } = useTranslation();
 
@@ -139,6 +141,33 @@ export default function FilterBar({
                         ))}
                     </div>
                 </div>
+
+                {/* Spacer to push search button to the right if space allows */}
+                <div style={{ flex: 1 }}></div>
+
+                {/* Search Button */}
+                <button
+                    onClick={onSearch}
+                    disabled={loading}
+                    style={{
+                        background: 'var(--color-accent-blue)',
+                        color: 'white',
+                        border: 'none',
+                        padding: '10px 24px',
+                        borderRadius: 'var(--radius-md)',
+                        fontSize: '0.9rem',
+                        fontWeight: '600',
+                        cursor: loading ? 'not-allowed' : 'pointer',
+                        opacity: loading ? 0.7 : 1,
+                        transition: 'var(--transition-fast)',
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '8px',
+                        boxShadow: '0 4px 12px rgba(59, 130, 246, 0.3)',
+                    }}
+                >
+                    🔍 {loading ? t('status.loading_short', { defaultValue: '...' }) : t('filter.search')}
+                </button>
             </div>
         </div>
     );
