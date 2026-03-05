@@ -162,63 +162,68 @@ export default function RankingList({ results, loading, loadingSlow, hasSearched
 
     // Results
     return (
-        <div className="glass-card slide-up" style={{ padding: '0', overflow: 'hidden', marginBottom: '40px' }}>
-            {/* Header Row */}
-            <div
-                style={{
-                    display: 'grid',
-                    gridTemplateColumns: '48px 1fr 1fr 100px 100px 90px',
-                    gap: '12px',
-                    padding: '12px 20px',
-                    borderBottom: '1px solid var(--color-border)',
-                    background: 'rgba(255,255,255,0.95)',
-                    position: 'sticky',
-                    top: 0,
-                    zIndex: 10,
-                }}
-            >
-                <span style={{ fontSize: '0.72rem', color: 'var(--color-text-muted)', fontWeight: '600', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
-                    {t('table.rank')}
-                </span>
-                <span style={{ fontSize: '0.72rem', color: 'var(--color-text-muted)', fontWeight: '600', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
-                    {t('table.channel')}
-                </span>
-                <span style={{ fontSize: '0.72rem', color: 'var(--color-text-muted)', fontWeight: '600', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
-                    {t('table.video_title')}
-                </span>
-                <span style={{ fontSize: '0.72rem', color: sortBy === 'views' ? 'var(--color-accent-blue)' : 'var(--color-text-muted)', fontWeight: '600', textTransform: 'uppercase', letterSpacing: '0.5px', textAlign: 'right' }}>
-                    {t('table.views')} {sortBy === 'views' && '▼'}
-                </span>
-                <span style={{ fontSize: '0.72rem', color: sortBy === 'subscribers' ? 'var(--color-accent-blue)' : 'var(--color-text-muted)', fontWeight: '600', textTransform: 'uppercase', letterSpacing: '0.5px', textAlign: 'right' }}>
-                    {t('table.subscribers')} {sortBy === 'subscribers' && '▼'}
-                </span>
-                <span style={{ fontSize: '0.72rem', color: sortBy === 'engagement' ? 'var(--color-accent-blue)' : 'var(--color-text-muted)', fontWeight: '600', textTransform: 'uppercase', letterSpacing: '0.5px', textAlign: 'right' }}>
-                    {t('table.engagement')} {sortBy === 'engagement' && '▼'}
-                </span>
+        <div className="fade-in" style={{ marginBottom: '40px' }}>
+            <div style={{ padding: '0 0 16px 8px', fontSize: '1.05rem', color: 'var(--color-text-primary)' }}>
+                {t('status.result_count_message', { count: results.length })}
             </div>
+            <div className="glass-card slide-up" style={{ padding: '0', overflow: 'hidden' }}>
+                {/* Header Row */}
+                <div
+                    style={{
+                        display: 'grid',
+                        gridTemplateColumns: '48px 1fr 1fr 100px 100px 90px',
+                        gap: '12px',
+                        padding: '12px 20px',
+                        borderBottom: '1px solid var(--color-border)',
+                        background: 'rgba(255,255,255,0.95)',
+                        position: 'sticky',
+                        top: 0,
+                        zIndex: 10,
+                    }}
+                >
+                    <span style={{ fontSize: '0.72rem', color: 'var(--color-text-muted)', fontWeight: '600', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
+                        {t('table.rank')}
+                    </span>
+                    <span style={{ fontSize: '0.72rem', color: 'var(--color-text-muted)', fontWeight: '600', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
+                        {t('table.channel')}
+                    </span>
+                    <span style={{ fontSize: '0.72rem', color: 'var(--color-text-muted)', fontWeight: '600', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
+                        {t('table.video_title')}
+                    </span>
+                    <span style={{ fontSize: '0.72rem', color: sortBy === 'views' ? 'var(--color-accent-blue)' : 'var(--color-text-muted)', fontWeight: '600', textTransform: 'uppercase', letterSpacing: '0.5px', textAlign: 'right' }}>
+                        {t('table.views')} {sortBy === 'views' && '▼'}
+                    </span>
+                    <span style={{ fontSize: '0.72rem', color: sortBy === 'subscribers' ? 'var(--color-accent-blue)' : 'var(--color-text-muted)', fontWeight: '600', textTransform: 'uppercase', letterSpacing: '0.5px', textAlign: 'right' }}>
+                        {t('table.subscribers')} {sortBy === 'subscribers' && '▼'}
+                    </span>
+                    <span style={{ fontSize: '0.72rem', color: sortBy === 'engagement' ? 'var(--color-accent-blue)' : 'var(--color-text-muted)', fontWeight: '600', textTransform: 'uppercase', letterSpacing: '0.5px', textAlign: 'right' }}>
+                        {t('table.engagement')} {sortBy === 'engagement' && '▼'}
+                    </span>
+                </div>
 
-            {/* Data Rows */}
-            {results.map((result, idx) => (
-                <VideoCard key={`${result.video.video_id}-${idx}`} result={result} rank={idx + 1} />
-            ))}
+                {/* Data Rows */}
+                {results.map((result, idx) => (
+                    <VideoCard key={`${result.video.video_id}-${idx}`} result={result} rank={idx + 1} />
+                ))}
 
-            {/* Footer */}
-            <div
-                style={{
-                    padding: '12px 20px',
-                    borderTop: '1px solid var(--color-border)',
-                    background: 'rgba(255,255,255,0.5)',
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    alignItems: 'center',
-                }}
-            >
-                <span style={{ fontSize: '0.72rem', color: 'var(--color-text-muted)' }}>
-                    {results.length} results
-                </span>
-                <span style={{ fontSize: '0.68rem', color: 'var(--color-text-muted)' }}>
-                    Monthly Star Promo ✦ Sponsored Content Analytics
-                </span>
+                {/* Footer */}
+                <div
+                    style={{
+                        padding: '12px 20px',
+                        borderTop: '1px solid var(--color-border)',
+                        background: 'rgba(255,255,255,0.5)',
+                        display: 'flex',
+                        justifyContent: 'space-between',
+                        alignItems: 'center',
+                    }}
+                >
+                    <span style={{ fontSize: '0.72rem', color: 'var(--color-text-muted)' }}>
+                        {results.length} results
+                    </span>
+                    <span style={{ fontSize: '0.68rem', color: 'var(--color-text-muted)' }}>
+                        Monthly Star Promo ✦ Sponsored Content Analytics
+                    </span>
+                </div>
             </div>
         </div>
     );

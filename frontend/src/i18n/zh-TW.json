@@ -16,7 +16,7 @@
         "search": "搜尋"
     },
     "table": {
-        "rank": "results",
+        "rank": "",
         "channel": "頻道",
         "video_title": "影片標題",
         "views": "觀看數",
@@ -37,6 +37,7 @@
         "loading": "資料載入中...",
         "loading_slow_title": "後端資料收集中...",
         "loading_slow_desc": "正在使用 YouTube API 和 Gemini AI 分析業配內容，最多請稍候約 10 秒。",
+        "result_count_message": "近一個月內的業配內容數量為 {{count}} 件",
         "server_starting": "正在啟動後端伺服器 (首次啟動約需 10~50 秒)，請稍候。",
         "error": "載入失敗，請稍後再試",
         "empty": "目前沒有找到業配影片",

@@ -16,7 +16,7 @@ function App() {
     const [hasSearched, setHasSearched] = useState(false);
     const [error, setError] = useState(null);
     const [filters, setFilters] = useState({
-        nationality: 'JP',
+        nationality: 'TW',
         creatorType: null,
         sortBy: 'views',
     });

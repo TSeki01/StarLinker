@@ -1,8 +1,8 @@
 import { useTranslation } from 'react-i18next';
 
 const NATIONALITIES = [
-    { code: 'JP', key: 'japan' },
     { code: 'TW', key: 'taiwan' },
+    { code: 'JP', key: 'japan' },
     { code: 'KR', key: 'korea' },
 ];
 

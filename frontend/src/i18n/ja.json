@@ -16,7 +16,7 @@
         "search": "検索"
     },
     "table": {
-        "rank": "results",
+        "rank": "",
         "channel": "チャンネル",
         "video_title": "動画タイトル",
         "views": "視聴数",
@@ -37,6 +37,7 @@
         "loading": "データ読み込み中...",
         "loading_slow_title": "バックエンドでデータ収集中...",
         "loading_slow_desc": "YouTube APIとGemini AIで案件を分析しています。最大10秒程度お待ちください。",
+        "result_count_message": "直近一か月間における案件配信数は{{count}}件です",
         "server_starting": "バックエンドの初期起動中です。10〜50秒程度お待ちください。",
         "error": "読み込みに失敗しました。もう一度お試しください",
         "empty": "案件動画が見つかりませんでした",
