@@ -241,8 +241,32 @@
       "type": "vtuber"
     },
     {
-      "channel_id": "UCiVs2pnGW5mLIc1jS2nxhjg",
-      "name": "김프로 KIMPRO",
+      "channel_id": "UCfpaSruWW3S4dibonKXENjA",
+      "name": "tzuyang 쯔양",
+      "nationality": "KR",
+      "type": "youtuber"
+    },
+    {
+      "channel_id": "UCUj6rrhMTR9pipbAWBAMvUQ",
+      "name": "침착맨",
+      "nationality": "KR",
+      "type": "youtuber"
+    },
+    {
+      "channel_id": "UCNx0TXIuGVEA_TWB5H2I6Lg",
+      "name": "솔라시도 solarsido",
+      "nationality": "KR",
+      "type": "youtuber"
+    },
+    {
+      "channel_id": "UCDNvRZRgvkBTUkQzFoT_8rA",
+      "name": "뜬뜬 DdeunDdeun",
+      "nationality": "KR",
+      "type": "youtuber"
+    },
+    {
+      "channel_id": "UCT-_4GqC-yLY1xtTHhwY0hA",
+      "name": "PONY Syndrome",
       "nationality": "KR",
       "type": "youtuber"
     },
@@ -259,18 +283,6 @@
       "type": "youtuber"
     },
     {
-      "channel_id": "UC-9-kyTW8ZkZNDHQJ6FgpwQ",
-      "name": "1MILLION Dance Studio",
-      "nationality": "KR",
-      "type": "youtuber"
-    },
-    {
-      "channel_id": "UCe52oNTB4GsPqtJZ4dtqFHA",
-      "name": "ROSÉ",
-      "nationality": "KR",
-      "type": "youtuber"
-    },
-    {
       "channel_id": "UCPNhCbg_200oFiOpS71Rpjw",
       "name": "JFlaMusic",
       "nationality": "KR",
@@ -283,82 +295,40 @@
       "type": "youtuber"
     },
     {
-      "channel_id": "UCBkyj16n2snkRg1BAzpRMpg",
-      "name": "tzuyang 쯔양",
+      "channel_id": "UC-9-kyTW8ZkZNDHQJ6FgpwQ",
+      "name": "1MILLION Dance Studio",
       "nationality": "KR",
       "type": "youtuber"
     },
     {
-      "channel_id": "UC2nkPb3sFU1rvJD0cMRO3bg",
-      "name": "침착맨",
-      "nationality": "KR",
-      "type": "youtuber"
-    },
-    {
-      "channel_id": "UCsJ6RuBiTVWElYEpOVdIB-w",
-      "name": "곽튜브 KWAKTUBE",
-      "nationality": "KR",
-      "type": "youtuber"
-    },
-    {
-      "channel_id": "UCBlPeSrPeyb2EY1WEfsdqoA",
-      "name": "주르르 Jururu",
-      "nationality": "KR",
-      "type": "vtuber"
-    },
-    {
-      "channel_id": "UCroM00J2ahCN6k-0-lAXp6g",
-      "name": "이세계아이돌 INE",
-      "nationality": "KR",
-      "type": "vtuber"
-    },
-    {
-      "channel_id": "UC-oCJP9a47IS-GtJIxSOkEA",
-      "name": "릴파 Lilpa",
+      "channel_id": "UCTifMx1ONpElK5x6B4ng8eg",
+      "name": "주르르 JURURU",
       "nationality": "KR",
       "type": "vtuber"
     },
     {
       "channel_id": "UCV9WL7sW6_KjanYkUUaIDfQ",
-      "name": "고세구 Gosegu",
+      "name": "고세구 GOSEGU",
       "nationality": "KR",
       "type": "vtuber"
     },
     {
-      "channel_id": "UCyJ68O4S60mXz92hLbC6scQ",
-      "name": "징버거 Jingburger",
+      "channel_id": "UCBkyj16n2snkRg1BAzpovXQ",
+      "name": "우왁굳 WOOWAKGOOD",
       "nationality": "KR",
       "type": "vtuber"
     },
     {
-      "channel_id": "UCoRGFfPVqQf-jPfPj0AXSpg",
-      "name": "비챤 Viichan",
+      "channel_id": "UCgtno0NekU8oRFDV2BVLsaA",
+      "name": "릴파 Lilpa",
       "nationality": "KR",
       "type": "vtuber"
     },
     {
-      "channel_id": "UCOlpx8MVE7M3asQ-WcxBAFQ",
-      "name": "엘피스 린 Elpis Lin",
+      "channel_id": "UCe52oNTB4GsPqtJZ4dtqFHA",
+      "name": "ROSÉ",
       "nationality": "KR",
-      "type": "vtuber"
-    },
-    {
-      "channel_id": "UC_kypQga3FB57OJvfhE64lg",
-      "name": "숲튽훈 Soopteunhun",
-      "nationality": "KR",
-      "type": "vtuber"
-    },
-    {
-      "channel_id": "UCHox_X7HpWmRQR8mJ2qI1yA",
-      "name": "빙하유 BingHayu",
-      "nationality": "KR",
-      "type": "vtuber"
-    },
-    {
-      "channel_id": "UCcRaOqp5qGDT3Oh1pig-5rw",
-      "name": "아카네 리제 AKANE LIZE",
-      "nationality": "KR",
-      "type": "vtuber"
+      "type": "youtuber"
     }
   ]
 }

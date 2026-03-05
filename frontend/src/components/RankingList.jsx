@@ -1,13 +1,29 @@
 import { useTranslation } from 'react-i18next';
 import VideoCard from './VideoCard';
 
-export default function RankingList({ results, loading, error, sortBy, onRetry }) {
+export default function RankingList({ results, loading, loadingSlow, error, sortBy, onRetry }) {
     const { t } = useTranslation();
 
     // Loading skeleton
     if (loading) {
         return (
             <div className="glass-card slide-up" style={{ padding: '0', overflow: 'hidden' }}>
+                {/* Slow Loading Indicator overlay */}
+                {loadingSlow && (
+                    <div style={{
+                        position: 'absolute', top: 0, left: 0, right: 0, bottom: 0,
+                        background: 'rgba(10, 15, 30, 0.8)',
+                        backdropFilter: 'blur(4px)',
+                        display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
+                        zIndex: 20, textAlign: 'center', padding: '24px'
+                    }}>
+                        <div className="skeleton" style={{ width: '40px', height: '40px', borderRadius: '50%', marginBottom: '16px' }} />
+                        <h3 style={{ color: 'white', fontSize: '1.1rem', marginBottom: '8px' }}>{t('status.loading_slow_title')}</h3>
+                        <p style={{ color: 'var(--color-text-secondary)', fontSize: '0.9rem', maxWidth: '300px' }}>
+                            {t('status.loading_slow_desc')}
+                        </p>
+                    </div>
+                )}
                 {/* Header Row */}
                 <div
                     style={{
