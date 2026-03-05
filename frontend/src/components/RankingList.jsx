@@ -55,7 +55,7 @@ export default function RankingList({ results, loading, loadingSlow, hasSearched
                 <div
                     style={{
                         display: 'grid',
-                        gridTemplateColumns: '48px 1fr 1fr 100px 100px 90px',
+                        gridTemplateColumns: '48px 1fr 1fr 90px 90px 120px',
                         gap: '12px',
                         padding: '12px 20px',
                         borderBottom: '1px solid var(--color-border)',
@@ -77,7 +77,7 @@ export default function RankingList({ results, loading, loadingSlow, hasSearched
                         key={i}
                         style={{
                             display: 'grid',
-                            gridTemplateColumns: '48px 1fr 1fr 100px 100px 90px',
+                            gridTemplateColumns: '48px 1fr 1fr 90px 90px 120px',
                             gap: '12px',
                             padding: '16px 20px',
                             borderBottom: '1px solid var(--color-border)',
@@ -173,7 +173,7 @@ export default function RankingList({ results, loading, loadingSlow, hasSearched
                 <div
                     style={{
                         display: 'grid',
-                        gridTemplateColumns: '48px 1fr 1fr 100px 100px 90px',
+                        gridTemplateColumns: '48px 1fr 1fr 90px 90px 120px',
                         gap: '12px',
                         padding: '12px 20px',
                         borderBottom: '1px solid var(--color-border)',
