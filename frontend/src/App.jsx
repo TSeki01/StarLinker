@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import Header from './components/Header';
 import FilterBar from './components/FilterBar';
 import RankingList from './components/RankingList';
+import Footer from './components/Footer';
 
 const API_BASE = import.meta.env.PROD
     ? ''
@@ -105,6 +106,7 @@ function App() {
                     sortBy={filters.sortBy}
                     onRetry={fetchData}
                 />
+                <Footer />
             </div>
         </div>
     );

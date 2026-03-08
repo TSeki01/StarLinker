@@ -215,27 +215,6 @@ export default function RankingList({ results, loading, loadingSlow, hasSearched
                 {results.map((result, idx) => (
                     <VideoCard key={`${result.video.video_id}-${idx}`} result={result} rank={idx + 1} />
                 ))}
-
-                {/* Footer */}
-                <div
-                    style={{
-                        padding: '12px 20px',
-                        borderTop: '1px solid var(--color-border)',
-                        background: 'rgba(255,255,255,0.5)',
-                        display: 'flex',
-                        justifyContent: 'space-between',
-                        alignItems: 'center',
-                        borderBottomLeftRadius: 'var(--radius-lg)',
-                        borderBottomRightRadius: 'var(--radius-lg)',
-                    }}
-                >
-                    <span style={{ fontSize: '0.72rem', color: 'var(--color-text-muted)' }}>
-                        {results.length} results
-                    </span>
-                    <span style={{ fontSize: '0.68rem', color: 'var(--color-text-muted)' }}>
-                        Monthly Star Promo ✦ Sponsored Content Analytics
-                    </span>
-                </div>
             </div>
         </div>
     );
